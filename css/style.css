@@ -68,7 +68,7 @@ button {
     padding: 5px 15px;
     width: 50%;
 }
-button img[src="img/check-circle.svg"], button:hover img[src="img/white-circle.svg"] {
+button img[src="img/check-circle.svg"], button img[src="img/white-circle.svg"] {
     display: none;
 }
 button:hover {
