@@ -10,7 +10,7 @@ a {
 body {
     background-color: mintcream;
     margin: 0;
-    padding: 50px 25px 0 50px;
+    padding: 50px;
 }
 .logo {
     align-items: center;
@@ -37,8 +37,9 @@ h1 {
     margin: 3rem 0 1.25rem;
 }
 h2 {
-    font-size: 1.6rem;
-    margin: 2rem 0 0.75rem;
+    font-size: 1.4rem;
+    margin: 2rem 0 1.5rem;
+    text-align: center;
 }
 section {
     margin: 0 auto;
@@ -51,6 +52,41 @@ section {
     margin: 50px 0;
     padding: 15px;
     text-align: center;
+}
+button {
+    align-items: center;
+    background-color: white;
+    border: 2px solid #ff6600;
+    border-radius: 30px;
+    color: #ff6600;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0 auto 20px;
+    padding: 5px 15px;
+    width: 50%;
+}
+button img[src="img/check-circle.svg"], button:hover img[src="img/white-circle.svg"] {
+    display: none;
+}
+button:hover {
+    background-color: #ff6600;
+    border: 2px solid white;
+    color: white;
+}
+button:hover img[src="img/circle.svg"], button.active img[src="img/circle.svg"] {
+    display: none;
+}
+button:hover img[src="img/white-circle.svg"] {
+    display: block;
+}
+button.active img[src="img/check-circle.svg"] {
+    display: block;
+}
+button.active img[src="img/white-circle.svg"] {
+    display: none;
 }
 .bold {
     font-weight: bold;
@@ -80,7 +116,7 @@ section {
     }
     h2 {
         font-size: 1.3rem;
-        margin: 1.75rem 0 0.25rem;
+        margin: 1.75rem 0 1.25rem;
     }
     .intro{
         margin: 25px 0;
