@@ -65,7 +65,9 @@ button {
     font-weight: bold;
     justify-content: space-between;
     margin: 0 auto 20px;
+    min-height: 3.5rem;
     padding: 5px 15px;
+    transition: background-color 0.5s ease-out;
     width: 50%;
 }
 button img[src="img/check-circle.svg"], button img[src="img/white-circle.svg"] {
@@ -87,6 +89,12 @@ button.active img[src="img/check-circle.svg"] {
 }
 button.active img[src="img/white-circle.svg"] {
     display: none;
+}
+button.not {
+    animation: jelly 0.5s;
+}
+button.notAvailable {
+    background-color: gray;
 }
 .bold {
     font-weight: bold;
@@ -122,3 +130,19 @@ button.active img[src="img/white-circle.svg"] {
         margin: 25px 0;
     }
 }
+/* --------------------------------------------------------------------------- Animation --------------------------------------------------------------------------- */
+@keyframes jelly {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+  }
