@@ -65,6 +65,7 @@ button {
     padding: 5px 15px;
     transition: background-color 0.5s ease-out;
     user-select: none; /* prevent little text select flicker on button click */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* https://stackoverflow.com/questions/11885161/remove-grey-background-on-link-clicked-in-ios-safari-chrome-firefox */
     width: 50%;
 }
 button:focus {
