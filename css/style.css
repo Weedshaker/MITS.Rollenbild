@@ -64,6 +64,7 @@ button {
     min-height: 3.5rem;
     padding: 5px 15px;
     transition: background-color 0.5s ease-out;
+    user-select: none; /* prevent little text select flicker on button click */
     width: 50%;
 }
 button:focus {
