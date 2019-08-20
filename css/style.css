@@ -66,6 +66,9 @@ button {
     transition: background-color 0.5s ease-out;
     width: 50%;
 }
+button:focus {
+    outline: none;
+}
 button img[src="img/check-circle.svg"], button img[src="img/white-circle.svg"] {
     display: none;
 }

@@ -17,6 +17,7 @@ if(container){
     */
     var selectionFunc = function(event){
         if (!event || !event.target || event.target === container) return
+        if (typeof event.preventDefault === 'function') event.preventDefault()
         /** @type {EventTarget | *} */
         var target = event.target && event.target.textContent ? event.target : event.target.parentElement
         /** @type {string} */
