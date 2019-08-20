@@ -3,10 +3,6 @@
     font-family: Arial, Helvetica, Geneva, sans-serif;
     font-size: 15px;
 }
-a {
-    color: black;
-    text-decoration: none;
-}
 body {
     background-color: mintcream;
     margin: 0;
@@ -73,21 +69,24 @@ button {
 button img[src="img/check-circle.svg"], button img[src="img/white-circle.svg"] {
     display: none;
 }
-button:hover {
-    background-color: #ff6600;
-    border: 2px solid white;
-    color: white;
-}
-button:hover img[src="img/circle.svg"], button.active img[src="img/circle.svg"] {
-    display: none;
-}
-button:hover img[src="img/white-circle.svg"] {
-    display: block;
+/* https://css-tricks.com/annoying-mobile-double-tap-link-issue/ */
+@media (hover) {
+    button:hover {
+        background-color: #ff6600;
+        border: 2px solid white;
+        color: white;
+    }
+    button:hover img[src="img/circle.svg"] {
+        display: none;
+    }
+    button:hover img[src="img/white-circle.svg"] {
+        display: block;
+    }
 }
 button.active img[src="img/check-circle.svg"] {
     display: block;
 }
-button.active img[src="img/white-circle.svg"] {
+button.active img[src="img/circle.svg"] , button.active img[src="img/white-circle.svg"]{
     display: none;
 }
 button.not {
@@ -106,9 +105,6 @@ button.notAvailable {
     font-size: 1.4rem;
 }
 /* --------------------------------------------------------------------- Mobile / Desktop Stuff --------------------------------------------------------------------- */
-.mobile {
-    display: none;
-}
 /* Prototype 375px but -> https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 @media only screen and (max-width: 812px) and (orientation: portrait) {
     /* portrait phones */
