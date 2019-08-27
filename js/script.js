@@ -1,15 +1,14 @@
 // @ts-check
-
-/**
- * maximum selectable elements
- * @type {number}
- */
-var max = 3
-/** @type {number} */
-var counter = 0
 /** @type {HTMLElement} */
 var container = document.getElementById('selection')
 if(container){
+    /**
+     * maximum selectable elements
+     * @type {number}
+     */
+    var max = 3
+    /** @type {number} */
+    var counter = 0
     /**
     * handle a click -> remove, add or animate that selection is not available
     * @param {Event | *} event
@@ -53,7 +52,7 @@ if(container){
         }
     }
     // listen to clicks
-    document.getElementById('selection').addEventListener('click', selectionFunc)
+    container.addEventListener('click', selectionFunc)
     // initialize the elements set at localStorage
     Array.from(container.childNodes).forEach(function(node){
         if(node.textContent && localStorage.getItem(node.textContent)){
